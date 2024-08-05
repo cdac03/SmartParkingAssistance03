@@ -1,4 +1,4 @@
-import "../App.css";
+import '../../App.css';
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
 import { useState } from "react";

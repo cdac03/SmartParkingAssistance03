@@ -1,0 +1,198 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden; /* Prevents additional scrolling */
+  background-color: #fffefe; /* Light grey background for overall page */
+}
+
+.sidebar {
+  width: 200px;
+  background-color: #ff4b2b; /* Sidebar background color */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar .logo p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: #1a1717; /* Slightly darker on hover */
+}
+
+.sidebar-item i {
+  margin-right: 10px;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* White background for content area */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0816d; /* Slightly darker grey for header */
+  border-bottom: 1px solid #ccc; /* Light border at the bottom */
+}
+
+.time-slot,
+.hours {
+  display: flex;
+  align-items: center;
+}
+
+.time-slot label,
+.hours label {
+  margin-right: 10px;
+}
+
+.time-slot select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* White background for select dropdown */
+}
+
+.hours input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 60px; /* Adjust width as needed */
+  background-color: #fff;
+}
+
+.buttons {
+  display: flex;
+  padding: 10px;
+  background-color: #e0e0e0; /* Slightly darker grey for buttons area */
+  border-bottom: 1px solid #ccc; /* Light border at the bottom */
+}
+
+.btn {
+  margin-right: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  background-color: #333; /* Initial button color matching the sidebar */
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.active {
+  background-color: #e6e600; /* Active button color */
+}
+
+.grid {
+  display: flex; /* Changed from grid to flexbox for horizontal layout */
+  flex-wrap: wrap; /* Allows wrapping if needed */
+  gap: 10px; /* Space between grid items */
+  padding: 10px;
+  flex-grow: 1; /* Allows grid to expand and fill available space */
+  overflow: auto; /* Adds scroll if content overflows */
+  background-color: #ffffff; /* White background for grid */
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px dotted #ccc; /* Distinct border for each grid item */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex: 1 1 100px; /* Flex basis for horizontal items */
+  min-width: 100px; /* Minimum width for each item */
+}
+
+.grid-item:hover {
+  background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+.grid-item.active {
+  background-color: #ffff00; /* Active color */
+}
+
+.grid-item .icon-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px; /* Adjust font size as needed */
+}
+
+.grid-item .icon-text i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.grid-item .icon-text span {
+  font-size: 18px; /* Adjust font size to match the icon */
+}
+
+.footer {
+  margin-top: auto; /* Ensures footer sticks at the bottom */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f0816d; /* Footer color matching header */
+  color: white; /* Footer text color */
+}
+
+.footer .settings,
+.footer .save {
+  display: flex;
+  align-items: center;
+}
+
+.footer .settings i,
+.footer .save i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.footer .save {
+  background-color: #f12409; /* Save button color */
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer .save:hover {
+  background-color: #962d2d; /* Darker color on hover */
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar, Nav, NavLink } from "react-bootstrap";
 import ButtonWithIcons from "./ButtonWithIcons ";
-// import "../utils/JumbotronWithNavbar.css";
+
 
 const JumbotronWithNavbar = () => {
   return (
