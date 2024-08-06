@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #
 Predefined Templates-
 const Home = () => {
@@ -5,3 +6,7 @@ const Home = () => {
 }
 
 export default Home;
+=======
+# SmartParkingAssistance03
+Smart Parking Assistance
+>>>>>>> origin/main
