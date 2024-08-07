@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 
 const SignIn = () => {
@@ -5,6 +6,7 @@ const SignIn = () => {
     email: "",
     password: "",
   });
+
   const handleChange = (evt) => {
     const value = evt.target.value;
     setState({
@@ -38,9 +40,6 @@ const SignIn = () => {
           <a href="#" className="social">
             <i className="fab fa-google-plus-g" />
           </a>
-          <a href="#" className="social">
-            <i className="fab fa-linkedin-in" />
-          </a>
         </div>
         <span>or use your account</span>
         <input
@@ -49,6 +48,7 @@ const SignIn = () => {
           name="email"
           value={state.email}
           onChange={handleChange}
+          required
         />
         <input
           type="password"
@@ -56,9 +56,14 @@ const SignIn = () => {
           placeholder="Password"
           value={state.password}
           onChange={handleChange}
+          required
         />
         <a href="#">Forgot your password?</a>
         <button>Sign In</button>
+        <div className="mobile-sign-up">
+          <span>Not having an account?</span>
+          <a href="sign-up">Sign Up</a>
+        </div>
       </form>
     </div>
   );
