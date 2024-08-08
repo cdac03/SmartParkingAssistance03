@@ -5,7 +5,7 @@ const ButtonGroup = ({ vehicle, handleButtonClick }) => {
     <div className="flex p-4 bg-gray-200 border-b border-gray-300">
       <button
         className={`btn mr-2 p-2 flex items-center cursor-pointer text-white rounded transition-colors duration-300 ${
-          vehicle === "car" ? "bg-yellow-300" : "bg-gray-800"
+          vehicle === "car" ? "bg-yellow-300" : "bg-gray-800" 
         }`}
         onClick={() => handleButtonClick("car")}
       >
