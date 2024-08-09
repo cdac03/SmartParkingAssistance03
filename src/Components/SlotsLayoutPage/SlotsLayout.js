@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import "../../utils/SlotsLayout.css";
+// import "../../utils/SlotsLayout.css";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
 import ButtonGroup from "./ButtonGroup";
@@ -16,18 +16,8 @@ const SlotsLayout = () => {
   const sidebarItems = [
     { icon: "fa-home", text: "Home" },
     { icon: "fa-parking", text: "Slots" },
-    { icon: "fa-credit-card", text: "Payments" },
-    { icon: "fa-ticket-alt", text: "Ticket" },
     { icon: "fa-user", text: "Profile" },
   ];
-
-  const handleButtonClick = (type) => {
-    setVehicle(type);
-  };
-
-  const handleGridItemClick = (item) => {
-    setActiveItem(item);
-  };
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-gray-50">
@@ -39,11 +29,11 @@ const SlotsLayout = () => {
           hours={hours}
           setHours={setHours}
         />
-        <ButtonGroup vehicle={vehicle} handleButtonClick={handleButtonClick} />
+        <ButtonGroup vehicle={vehicle} handleButtonClick={setVehicle} />
         <Grid
           vehicle={vehicle}
           activeItem={activeItem}
-          handleGridItemClick={handleGridItemClick}
+          handleGridItemClick={setActiveItem}
         />
         <Footer />
       </div>
